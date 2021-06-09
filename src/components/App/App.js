@@ -1,47 +1,67 @@
 import { Component } from 'react'
+import {fetchArticles} from '../../apiCalls'
+import { Link, Route } from 'react-router-dom'
+import ArticleDisplay from "../ArticleDisplay/ArticleDisplay.js"
+import ArticleDetails from "../ArticleDetails/ArticleDetails.js"
 
 class App extends Component {
   constructor() {
     super()
     this.state = {
-
+      articles: []
     }
   }
 
-  
+  getArticle = (type) => {
+    fetchArticles(type)
+    .then(data => this.setState({articles: data.results}))
+  }
   render() {
     return (
-      <div className="home-page">
-        <div>Which category do you want to look at today!</div>
-        <button>arts</button>
-        <button>automobiles</button>
-        <button>books</button>
-        <button>business</button>
-        <button>fashion</button>
-        <button>food</button>
-        <button>health</button>
-        <button>home</button>
-        <button>insider</button>
-        <button>magazine</button>
-        <button>movies</button>
-        <button>nyregion</button>
-        <button>obituaries</button>
-        <button>opinion</button>
-        <button>politics</button>
-        <button>realestate</button>
-        <button>science</button>
-        <button>sports</button>
-        <button>sundayreview</button>
-        <button>technology</button>
-        <button>theater</button>
-        <button>magazine</button>
-        <button>travel</button>
-        <button>upshot</button>
-        <button>us</button>
-        <button>world</button>
-      </div>
-      
-
+      <>
+        <Route exact path="/" render={() =>
+          <div className="home-page">
+           
+            <div>Which category do you want to look at today!</div>
+            
+             <Link to={"/articles"}>
+              <button onClick={(e) => this.getArticle('arts')}>arts</button> 
+              
+              <button onClick={(e) => this.getArticle('automobiles', e)}>automobiles</button>
+              <button onClick={(e) => this.getArticle('books', e)}>books</button>
+              <button onClick={(e) => this.getArticle('business', e)}>business</button>
+              <button onClick={(e) => this.getArticle('fashion', e)}>fashion</button>
+              <button onClick={(e) => this.getArticle('food', e)}>food</button>
+              <button onClick={(e) => this.getArticle('health', e)}>health</button>
+              <button onClick={(e) => this.getArticle('home', e)}>home</button>
+              <button onClick={(e) => this.getArticle('insider', e)}>insider</button>
+              <button onClick={(e) => this.getArticle('magazine', e)}>magazine</button>
+              <button onClick={(e) => this.getArticle('movies', e)}>movies</button>
+              <button onClick={(e) => this.getArticle('nyregion', e)}>nyregion</button>
+              <button onClick={(e) => this.getArticle('arts', e)}>obituaries</button>
+              <button onClick={(e) => this.getArticle('opinion', e)}>opinion</button>
+              <button onClick={(e) => this.getArticle('politics', e)}>politics</button>
+              <button onClick={(e) => this.getArticle('realestate', e)}>realestate</button>
+              <button onClick={(e) => this.getArticle('science', e)}>science</button>
+              <button onClick={(e) => this.getArticle('sports', e)}>sports</button>
+              <button onClick={(e) => this.getArticle('sundayreview', e)}>sundayreview</button>
+              <button onClick={(e) => this.getArticle('technology', e)}>technology</button>
+              <button onClick={(e) => this.getArticle('theater', e)}>theater</button>
+              <button onClick={(e) => this.getArticle('magazine', e)}>magazine</button>
+              <button onClick={(e) => this.getArticle('travel', e)}>travel</button>
+              <button onClick={(e) => this.getArticle('upshot', e)}>upshot</button>
+              <button onClick={(e) => this.getArticle('us', e)}>us</button>
+              <button onClick={(e) => this.getArticle('world', e)}>world</button>
+              </Link>
+            
+          
+          </div>
+        } />
+        <Route exact path={"/articles"} render={() => 
+        <ArticleDisplay articles = {this.state.articles}/>
+        } />
+        {/* <Route exact path={"/articles/"} */}
+      </>
     )
   }
 }
