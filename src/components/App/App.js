@@ -60,7 +60,9 @@ class App extends Component {
         <Route exact path={"/articles"} render={() => 
         <ArticleDisplay articles = {this.state.articles}/>
         } />
-        {/* <Route exact path={"/articles/"} */}
+        <Route exact path={"/articles/:title"} render={({match}) => 
+        <ArticleDetails title={ match.params.title } articles={ this.state.articles } />
+        }/>
       </>
     )
   }
