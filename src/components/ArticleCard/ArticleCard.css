@@ -1,6 +1,6 @@
 .article-card {
   width: 20em;
-  height: 12em;
+  height: auto;
   border: solid 1px red;
   margin: 3em;
   text-align: center;
