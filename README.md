@@ -1,9 +1,10 @@
-# Pear - A Github PR Review Solution
+# news4you
 
 A Front-End Project [Owen Hallgren](https://github.com/OwenHallgren)
 
 ## Overview
-News4You is an app that uses the [NYT top stories api](https://developer.nytimes.com/docs/top-stories-product/1/overview)
+News4You is an app that uses the [NYT top stories api](https://developer.nytimes.com/docs/top-stories-product/1/overview). A user can choose which category of news they want to see. They then see a list of related articles and have the option to filter them. When a user clicks on an articles they are given more details and a link to the full article. ![ezgif com-gif-maker](https://user-images.githubusercontent.com/71943275/121634153-53a5ec80-ca41-11eb-84f0-8f734f9a605f.gif)
+
 
 
 ## Planning Resources
@@ -43,7 +44,7 @@ If you see Compiled successfully! in your terminal, the application is running a
 
 
 ### Application Demo
-![app demo](https://media.giphy.com/media/NQQOUtqLk0Gqa8NVm4/giphy.gif)
+![app demo](https://giphy.com/gifs/O3jqOfyCtEIOF6RyId)
 
 ## Future Iterations
 
