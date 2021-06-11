@@ -1,4 +1,31 @@
 .photo {
-  width: auto;
-  height: 10em;
+  width: 30em;
+  height: auto;
+  align-self: center;
+}
+
+.details-container {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin: 30px;
+}
+
+.full-story:link, .full-story:visited {
+  color: black;
+  text-align: center;
+  text-decoration: none;
+  align-self: center;
+  margin: 30px;
+  height: 30px;
+  width: 125px;
+  background-color: aliceblue;
+  font-size: large;
+  text-decoration: none;
+  border-radius: 10px;
+  border: solid black 1px;
+}
+
+.full-story:hover, .full-story:active {
+  transform: scale(1.05);
 }

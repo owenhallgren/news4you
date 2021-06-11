@@ -3,3 +3,11 @@
   flex-direction: row;
   flex-wrap: wrap;
 }
+
+.home-button {
+  height: 30px;
+}
+
+.article-display-container {
+  text-align: center;
+}
