@@ -1,7 +1,9 @@
 import { Component } from 'react'
+import './FilterForm.css'
+
 
 class FilterForm extends Component {
-  constructor(props) {
+  constructor({filterArticles}) {
     super();
     this.state = {
       search: ''
@@ -10,6 +12,7 @@ class FilterForm extends Component {
 
   handleChange = e =>  {
         this.setState({ [e.target.name]: e.target.value })
+        this.props.filterArticles(e.target.value)
     }
 
   render() {
@@ -22,7 +25,7 @@ class FilterForm extends Component {
             value={this.state.search}
             onChange={e => this.handleChange(e)}
         />
-        <button onclick={(e) => this.props.filterArticles(e, this.state.search)}>Search</button>
+        {/* <button className="search-button" onclick={(e) => this.props.filterArticles(e, this.state.search)}>Search</button> */}
       </form>
     )
   }
