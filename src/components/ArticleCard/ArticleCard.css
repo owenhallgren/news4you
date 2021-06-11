@@ -1,7 +1,14 @@
 .article-card {
-  width: 20em;
+  margin: 25px;
   height: auto;
-  border: solid 1px red;
-  margin: 3em;
-  text-align: center;
+  width: 125px;
+  background-color: aliceblue;
+  font-size: 1em;
+  text-decoration: none;
+  border-radius: 10px;
+  color: black;
+}
+
+.article-card:hover {
+  transform: scale(1.05);
 }
