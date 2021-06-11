@@ -3,9 +3,9 @@ import { Link } from 'react-router-dom'
 
 const ArticleCard = ({article}) => {
   return (
-    <Link to={`/articles/${article.title}`}>
+    <Link to={`/articles/${article.title}`} style={{textDecoration:'none'}}>
       <div className="article-card">
-      <h4>Title {article.title}</h4>
+      <h4>{article.title}</h4>
       </div>
     </Link>
   )
